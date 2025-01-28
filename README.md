@@ -29,14 +29,14 @@ or use CDN:
 ## Usage
 
 ```js
-import mapboxGl from 'mapbox-gl';
-import MapboxDraw from '@mapbox/mapbox-gl-draw';
-import SplitLineMode from 'mapbox-gl-draw-split-line-mode';
-import mapboxGlDrawPassingMode from 'mapbox-gl-draw-passing-mode';
+import mapboxGl from "mapbox-gl";
+import MapboxDraw from "@mapbox/mapbox-gl-draw";
+import SplitLineMode from "mapbox-gl-draw-split-line-mode";
+import mapboxGlDrawPassingMode from "mapbox-gl-draw-passing-mode";
 
 const map = new mapboxgl.Map({
-  container: 'map', // container id
-  style: 'mapbox://styles/mapbox/streets-v11',
+  container: "map", // container id
+  style: "mapbox://styles/mapbox/streets-v11",
   center: [-91.874, 42.76], // starting position
   zoom: 12, // starting zoom
 });
@@ -48,17 +48,17 @@ const draw = new MapboxDraw({
     splitLineMode: SplitLineMode,
     passing_mode_point: mapboxGlDrawPassingMode(MapboxDraw.modes.draw_point),
     passing_mode_line_string: mapboxGlDrawPassingMode(
-      MapboxDraw.modes.draw_line_string
+      MapboxDraw.modes.draw_line_string,
     ),
     passing_mode_polygon: mapboxGlDrawPassingMode(
-      MapboxDraw.modes.draw_polygon
+      MapboxDraw.modes.draw_polygon,
     ),
   }),
 });
 map.addControl(draw);
 
 // when mode drawing should be activated
-draw.changeMode('splitLineMode', { spliter: mode }); //mode can be point,line_string or polygon
+draw.changeMode("splitLineMode", { spliter: mode }); //mode can be point,line_string or polygon
 ```
 
 ## [Example](https://github.com/ReyhaneMasumi/mapbox-gl-draw-split-line-mode/blob/main/demo/src/App.js)

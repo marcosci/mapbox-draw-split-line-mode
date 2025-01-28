@@ -1,12 +1,14 @@
 {
-  "name": "mapbox-gl-draw-split-line-mode",
-  "version": "1.0.3",
+  "name": "split-line-mode",
+  "version": "1.4.5",
   "description": "A custom mode for MapboxGL Draw to split lines",
+  "type": "module",
   "main": "dist/index.js",
   "module": "src/index.js",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "format": "prettier --plugin-search-dir . --write ."
   },
   "repository": {
     "type": "git",
@@ -28,17 +30,20 @@
     "dist",
     "src"
   ],
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "11.0.2",
-    "@rollup/plugin-inject": "4.0.1",
-    "@rollup/plugin-node-resolve": "7.1.1",
-    "rollup": "^1.27.14",
-    "rollup-plugin-terser": "^7.0.2"
-  },
   "peerDependencies": {
-    "@mapbox/mapbox-gl-draw": "1.2.0"
+    "@mapbox/mapbox-gl-draw": "1.4.3"
   },
   "dependencies": {
-    "@turf/turf": "5.1.6"
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-inject": "^5.0.5",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@turf/turf": "7.2.0",
+    "mapbox-gl-draw-passing-mode": "^2.2.2",
+    "mapbox-gl-draw-select-mode": "^1.0.3",
+    "prettier": "^3.4.2",
+    "rollup": "^4.32.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4"
   }
 }
